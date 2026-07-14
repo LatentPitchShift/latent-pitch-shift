@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <meta name="description" content=Pitch Shifting via Semantic Transformations in a Shared Audio&ndash;Symbolic Latent Space>
+  <meta property="og:title" content=Pitch Shifting via Semantic Transformations in a Shared Audio&ndash;Symbolic Latent Space/>
+  <meta property="og:description" content= Pitch Shifting via Semantic Transformations in a Shared Audio&ndash;Symbolic Latent Space/>
+
+  <meta property="og:image" content="static/images/overview.PNG" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content=Pitch Shifting via Semantic Transformations in a Shared Audio&ndash;Symbolic Latent Space>
+  <meta name="twitter:description" content=Pitch Shifting via Semantic Transformations in a Shared Audio&ndash;Symbolic Latent Space>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/overview.PNG">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Multi-Instrument Synthesis, Diffusion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Pitch Shifting via Semantic Transformations in a Shared Audio&ndash;Symbolic Latent Space</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="misc/academicons.min.css">
+
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="misc/jquery.min.js"></script>
+  <script src="misc/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Pitch Shifting via Semantic Transformations in a Shared Audio&ndash;Symbolic Latent Space</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://www.audiolabs-erlangen.de/fau/assistant/maman" target="_blank">Ben Maman</a><sup>1</sup>,</span>
+
+
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=LyzozeAAAAAJ&hl=de" target="_blank">Andreas Brendel</a><sup>2</sup>,</span>
+
+                  <span class="author-block">
+                    <a href="https://www.audiolabs-erlangen.de/fau/professor/mueller" target="_blank">Meinard Müller</a><sup>1</sup>,</span>
+
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>International Audio Laboratories Erlangen, Germany<br><sup>2</sup>Fraunhofer IIS, Erlangen, Germany<br>
+                      <!-- Conferance name and year</span> -->
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Demo Page</h2>
+    </div>
+  </div>
+
+  <section class="section">
+  <div class="container is-widescreen">
+    <h2 class="title is-3" id="contents">Contents</h2>
+
+      <ul style="list-style-type:disc;padding-left:40px">
+      <li><a href="#section_rubberband">Comparison with Signal-Processing-Based Frequency Scaling</a></li>
+      <li><a href="#section_resynth">Comparison with A Data-Driven Analysis&ndash;Resynthesis Approach</a></li>
+      <li><a href="#section_noft">The Effect of Cycle-Consistency Fine-Tuning</a></li>
+
+    </ul>
+  </div>
+
+
+
+  <section class="section">
+  <div class="container is-widescreen">
+    <b>For better visibilty, please use a desktop Google Chrome, Microsoft Edge, or Mozilla Firefox browser.</b>
+    <br><br><br>
+    <h2 class="title is-3" id="section_rubberband">Comparison with Signal-Processing-Based Frequency Scaling<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+    <p align="justify">
+      In this section, we present qualitative samples comparing our proposed data-driven pitch-shifting method with a signal-processing-based approach
+      using frequency scaling. As a baseline, we use the Rubber Band library, which is known for producing high-quality audio.
+      However, as can be heard in the samples, despite its overall quality, it introduces significant timbre distortion for larger pitch shifts  (e.g., three semitones or more).
+      This effect is particularly noticeable in singing, where upward shifts can result in a &ldquo;chipmunk&rdquo; effect and downward shifts in a &ldquo;Darth Vader&rdquo; effect.
+      These artifacts arise because frequency scaling uniformly shifts all frequencies,
+      altering formants in a way that does not accurately reflect real-world behavior.
+      In contrast, our data-driven approach better preserves timbre and formants, especially for larger shifts,
+      as it learns the relationship between pitch and timbre directly from data.
+    </p>
+    <p>
+    The source is given in the first column. In the next three columns, it is shifted with three randomly sampled integer numbers of semitones.
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+
+
+  <div class="container is-widescreen">
+    <h2 class="title is-3" id="section_resynth">Comparison with A Data-Driven Analysis&ndash;Resynthesis Approach<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+    <p align="justify">
+      In this section, we present a qualitative comparison with a data-driven analysis–resynthesis approach, where multiple aspects of a signal are analyzed, modified, and then resynthesized. While this is a common strategy in voice conversion systems, it becomes extremely challenging for complex audio signals, which require disentangling elements such as pitch, instrumentation, lyrics, and performer identity, leading to the accumulation of errors and inaccuracies. In contrast, our approach performs transformations directly within a reconstructible latent space, preserving the underlying structure and rich information of the original signal.
+      As can be heard in the first two songs, content is somehwat captured by analysis&ndash;resynthesis, but the information loss is substantial.
+      In the third song, analysis&ndash;resynthesis severely degrades the content, rendering it largely unrecognizable, whereas our method preserves the content while modifying pitch.
+  </p>
+
+
+
+  <div class="columns is-centered">
+    <div class="column">
+        <small><small>
+          <br>
+          <b>Source (MUSDB18):</b>
+        <audio controls>
+          <source src="static/samples/ref/amplifiersS0.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>-1 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/amplifiersS-1.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>-1 Semitones (Analysis&ndash;Resynthesis):</b>
+      <audio controls>
+        <source src="static/samples/resynth/amplifiersS-1.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>2 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/amplifiersS2.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>2 Semitones (Analysis&ndash;Resynthesis):</b>
+      <audio controls>
+        <source src="static/samples/resynth/amplifiersS2.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>5 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/amplifiersS5.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>5 Semitones (Analysis&ndash;Resynthesis):</b>
+      <audio controls>
+        <source src="static/samples/resynth/amplifiersS5.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+  </div>
+
+
+  <div class="columns is-centered">
+    <div class="column">
+        <small><small>
+          <br>
+          <b>Source (MUSDB18):</b>
+        <audio controls>
+          <source src="static/samples/ref/ariseS0.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>2 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/ariseS2.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>2 Semitones (Analysis&ndash;Resynthesis):</b>
+      <audio controls>
+        <source src="static/samples/resynth/ariseS2.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>3 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/ariseS3.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>3 Semitones (Analysis&ndash;Resynthesis):</b>
+      <audio controls>
+        <source src="static/samples/resynth/ariseS3.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>4 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/ariseS4.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>4 Semitones (Analysis&ndash;Resynthesis):</b>
+      <audio controls>
+        <source src="static/samples/resynth/ariseS4.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+  </div>
+
+
+  <div class="columns is-centered">
+    <div class="column">
+        <small><small>
+          <br>
+          <b>Source (MUSDB18):</b>
+        <audio controls>
+          <source src="static/samples/ref/skelpoluS0.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>2 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/skelpoluS2.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>2 Semitones (Analysis&ndash;Resynthesis):</b>
+      <audio controls>
+        <source src="static/samples/resynth/skelpoluS2.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>3 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/skelpoluS3.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>3 Semitones (Analysis&ndash;Resynthesis):</b>
+      <audio controls>
+        <source src="static/samples/resynth/skelpoluS3.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>4 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/skelpoluS4.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>4 Semitones (Analysis&ndash;Resynthesis):</b>
+      <audio controls>
+        <source src="static/samples/resynth/skelpoluS4.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+  </div>
+
+
+
+  </div>
+
+
+  <br><br><br>
+
+  <div class="container is-widescreen">
+    <h2 class="title is-3" id="section_noft">The Effect of Cycle-Consistency Fine-Tuning<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+    <p align="justify">
+    In this section, we present qualitative samples demonstrating the effect of our proposed cycle-consistency fine-tuning without requiring paired audio data.
+    We apply learned pitch transformations to audio embeddings and compare decoding using the fine-tuned decoder with decoding using the original decoder.
+    While the underlying signal structure and content are already captured without fine-tuning, the resulting audio is notably noisy, as the model was not trained on transformed embeddings.
+    Cycle-consistency fine-tuning substantially improves audio quality, without the need for paired pitch-shifted audio data.
+  </p>
+
+
+
+
+  <div class="columns is-centered">
+    <div class="column">
+        <small><small>
+          <br>
+          <b>Source (MUSDB18):</b>
+        <audio controls>
+          <source src="static/samples/ref/sirenS0.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>-4 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/sirenS-4.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>-4 Semitones (No Fine-Tuning):</b>
+      <audio controls>
+        <source src="static/samples/noft/sirenS-4.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>1 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/sirenS1.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>1 Semitones (No Fine-Tuning):</b>
+      <audio controls>
+        <source src="static/samples/noft/sirenS1.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>2 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/sirenS2.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>2 Semitones (No Fine-Tuning):</b>
+      <audio controls>
+        <source src="static/samples/noft/sirenS2.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+  </div>
+
+
+  <div class="columns is-centered">
+    <div class="column">
+        <small><small>
+          <br>
+          <b>Source (MUSDB18):</b>
+        <audio controls>
+          <source src="static/samples/ref/brightS0.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>-4 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/brightS-4.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>-4 Semitones (No Fine-Tuning):</b>
+      <audio controls>
+        <source src="static/samples/noft/brightS-4.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>-1 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/brightS-1.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>-1 Semitones (No Fine-Tuning):</b>
+      <audio controls>
+        <source src="static/samples/noft/brightS-1.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>2 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/brightS2.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>2 Semitones (No Fine-Tuning):</b>
+      <audio controls>
+        <source src="static/samples/noft/brightS2.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+  </div>
+
+
+
+  <div class="columns is-centered">
+    <div class="column">
+        <small><small>
+          <br>
+          <b>Source (MUSDB18):</b>
+        <audio controls>
+          <source src="static/samples/ref/overthetopS0.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>-2 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/overthetopS-2.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>-2 Semitones (No Fine-Tuning):</b>
+      <audio controls>
+        <source src="static/samples/noft/overthetopS-2.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>1 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/overthetopS1.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>1 Semitones (No Fine-Tuning):</b>
+      <audio controls>
+        <source src="static/samples/noft/overthetopS1.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>3 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/overthetopS3.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>3 Semitones (No Fine-Tuning):</b>
+      <audio controls>
+        <source src="static/samples/noft/overthetopS3.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+  </div>
+
+
+
+
+  </div>
+
+
+
+</section>
+
+
+
+
+
+  </body>
+  </html>
