@@ -1,10 +1,3 @@
-© Ben Maman and Meinard Müller (International Audio Laboratories Erlangen) 2026.
+[Project Page](https://LatentPitchShift.github.io/latent-pitch-shift) for our paper: Maman et al., "Pitch Shifting via Semantic Transformations in a Shared Audio--Symbolic Latent Space"
 
-This project is licensed under the [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
-This means you can share and adapt under the following conditions:
-
-**1) Attribution - give appropriate credit to the authors**.
-
-**2) Non-commercial use only**.
-
-**3) ShareAlike — you must distribute your contributions under the same license as the original.**
+![alt text](static/images/overview.png "Overview")
