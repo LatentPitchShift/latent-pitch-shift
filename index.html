@@ -89,9 +89,10 @@
     <h2 class="title is-3" id="contents">Contents</h2>
 
       <ul style="list-style-type:disc;padding-left:40px">
-      <li><a href="#section_rubberband">Comparison with Signal-Processing-Based Frequency Scaling</a></li>
       <li><a href="#section_resynth">Comparison with A Data-Driven Analysis&ndash;Resynthesis Approach</a></li>
       <li><a href="#section_noft">The Effect of Cycle-Consistency Fine-Tuning</a></li>
+      <li><a href="#section_rubberband">Comparison with Signal-Processing-Based Frequency Scaling</a></li>
+
 
     </ul>
   </div>
@@ -99,101 +100,13 @@
 
 
   <section class="section">
-  <div class="container is-widescreen">
-    <b>For better visibilty, please use a desktop Google Chrome, Microsoft Edge, or Mozilla Firefox browser.</b>
-    <br><br><br>
-    <h2 class="title is-3" id="section_rubberband">Comparison with Signal-Processing-Based Frequency Scaling<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-    <p align="justify">
-      In this section, we present qualitative samples comparing our proposed data-driven pitch-shifting method with a signal-processing-based approach
-      using frequency scaling. As a baseline, we use the Rubber Band library, which is known for producing high-quality audio.
-      However, as can be heard in the samples, despite its overall quality, it introduces significant timbre distortion for larger pitch shifts  (e.g., three semitones or more).
-      This effect is particularly noticeable in singing, where upward shifts can result in a &ldquo;chipmunk&rdquo; effect and downward shifts in a &ldquo;Darth Vader&rdquo; effect.
-      These artifacts arise because frequency scaling uniformly shifts all frequencies,
-      altering formants in a way that does not accurately reflect real-world behavior.
-      In contrast, our data-driven approach better preserves timbre and formants, especially for larger shifts,
-      as it learns the relationship between pitch and timbre directly from data.
-    </p>
-    <p>
-    The sources are from well known songs. In the following three columns, each source is shifted with three randomly sampled integer numbers of semitones.
-  </p>
 
-  <div class="columns is-centered">
-
-
-    <div class="column">
-        <small><small>
-          <br>
-          <b>-5 Semitones (Ours):</b><br>
-        <audio controls>
-          <source src="static/samples/ours2/dancingS-5.mp3", type="audio/mp3">
-        </audio>
-        <br>
-        <b>-5 Semitones (Rubber Band):</b><br>
-      <audio controls>
-        <source src="static/samples/rubberband2/dancingS-5.mp3", type="audio/mp3">
-      </audio>
-      <br>
-        </small></small>
-    </div>
-
-    <div class="column">
-        <small><small>
-          <br>
-          <b>-1 Semitones (Ours):</b><br>
-        <audio controls>
-          <source src="static/samples/ours2/dancingS-1.mp3", type="audio/mp3">
-        </audio>
-        <br>
-        <b>-1 Semitones (Rubber Band):</b><br>
-      <audio controls>
-        <source src="static/samples/rubberband2/dancingS-1.mp3", type="audio/mp3">
-      </audio>
-      <br>
-        </small></small>
-    </div>
-
-    <div class="column">
-        <small><small>
-          <br>
-          <b>3 Semitones (Ours):</b><br>
-        <audio controls>
-          <source src="static/samples/ours2/dancingS3.mp3", type="audio/mp3">
-        </audio>
-        <br>
-        <b>3 Semitones (Rubber Band):</b><br>
-      <audio controls>
-        <source src="static/samples/rubberband2/dancingS3.mp3", type="audio/mp3">
-      </audio>
-      <br>
-        </small></small>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <br>
-  <br>
-  <br>
 
 
 
   <div class="container is-widescreen">
+    <b>For better visibilty, please use a desktop Google Chrome, Microsoft Edge, or Mozilla Firefox browser.</b>
+    <br><br><br>
     <h2 class="title is-3" id="section_resynth">Comparison with A Data-Driven Analysis&ndash;Resynthesis Approach<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
     <p align="justify">
       In this section, we present a qualitative comparison with a data-driven analysis–resynthesis approach, where multiple aspects of a signal are analyzed, modified, and then resynthesized. While this is a common strategy in voice conversion systems, it becomes extremely challenging for complex audio signals, which require disentangling elements such as pitch, instrumentation, lyrics, and performer identity, leading to the accumulation of errors and inaccuracies. In contrast, our approach performs transformations directly within a reconstructible latent space, preserving the underlying structure and rich information of the original signal.
@@ -592,6 +505,95 @@
         </small></small>
     </div>
   </div>
+
+
+
+
+  </div>
+
+  <br><br><br>
+
+  <div class="container is-widescreen">
+
+    <h2 class="title is-3" id="section_rubberband">Comparison with Signal-Processing-Based Frequency Scaling<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+    <p align="justify">
+      In this section, we present qualitative samples comparing our proposed data-driven pitch-shifting method with a signal-processing-based approach
+      using frequency scaling. As a baseline, we use the Rubber Band library, which is known for producing high-quality audio.
+      However, as can be heard in the samples, despite its overall quality, it introduces significant timbre distortion for larger pitch shifts  (e.g., three semitones or more).
+      This effect is particularly noticeable in singing, where upward shifts can result in a &ldquo;chipmunk&rdquo; effect and downward shifts in a &ldquo;Darth Vader&rdquo; effect.
+      These artifacts arise because frequency scaling uniformly shifts all frequencies,
+      altering formants in a way that does not accurately reflect real-world behavior.
+      In contrast, our data-driven approach better preserves timbre and formants, especially for larger shifts,
+      as it learns the relationship between pitch and timbre directly from data.
+    </p>
+    <p>
+    The sources are from well known songs. In the following three columns, each source is shifted with three randomly sampled integer numbers of semitones.
+  </p>
+
+  <div class="columns is-centered">
+
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>-5 Semitones (Ours):</b><br>
+        <audio controls>
+          <source src="static/samples/ours2/dancingS-5.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>-5 Semitones (Rubber Band):</b><br>
+      <audio controls>
+        <source src="static/samples/rubberband2/dancingS-5.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>-1 Semitones (Ours):</b><br>
+        <audio controls>
+          <source src="static/samples/ours2/dancingS-1.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>-1 Semitones (Rubber Band):</b><br>
+      <audio controls>
+        <source src="static/samples/rubberband2/dancingS-1.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>3 Semitones (Ours):</b><br>
+        <audio controls>
+          <source src="static/samples/ours2/dancingS3.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>3 Semitones (Rubber Band):</b><br>
+      <audio controls>
+        <source src="static/samples/rubberband2/dancingS3.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
