@@ -71,6 +71,32 @@
                     <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                      <!-- <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="https://ismir2026program.ismir.net/poster_34.html#details" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Ismir 2026 Paper</span>
+                    </a>
+                  </span>
+
+            </div>
+          </div>
+
 
         </div>
       </div>
@@ -78,11 +104,34 @@
   </div>
 </section>
 
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <h2 class="title is-3">Demo Page</h2>
+<!-- <div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">Demo Page</h2>
+  </div>
+</div> -->
+
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">Abstract</h2>
+    <div class="content has-text-justified">
+<p>
+In this paper, we present a data-driven approach to pitch shifting based on a semantic transformation in a shared audio&ndash;symbolic latent space, rather than direct frequency scaling. We learn a multi-view representation that embeds audio together with complementary quasi-symbolic views such as pitch contours, piano rolls, and phonetic features, capturing both acoustic detail and structured musical information. Within this space, pitch-shift transformations are learned from symbolic training pairs obtained by transposing pitch-related quasi-symbolic views, avoiding the need for paired audio recordings at different pitch levels. The transformation is applied to embeddings derived from audio and decoded to generate pitch-shifted signals, with a subsequent fine-tuning stage improving reconstruction quality. Experiments on vocal&ndash;instrumental music demonstrate improved timbre preservation compared to a conventional signal-processing baseline, particularly for large pitch shifts, as well as substantially higher audio quality than a data-driven analysis&ndash;resynthesis approach. More broadly, the results suggest that semantic transformations in a shared audio&ndash;symbolic latent space provide a promising framework for controllable audio editing.
+</p>
     </div>
   </div>
+</div>
+<!--/ Abstract. -->
+
+<!-- </section> -->
+<br>
+<div class="item">
+<!-- Your image here -->
+  <div style="width: 100%; height: 100%">
+    <center><img src="static/images/overview.PNG" width="60%" height="60%"></center>
+  </div>
+</div>
+
+
 
   <section class="section">
   <div class="container is-widescreen">
@@ -116,11 +165,75 @@
 
 
 
+
+
+
   <div class="columns is-centered">
     <div class="column">
         <small><small>
           <br>
-          <b>Source (MUSDB18):</b>
+          <b>Source: Arise, "Run, Run, Run" (MUSDB18):</b>
+        <audio controls>
+          <source src="static/samples/ref/ariseS0.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>2 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/ariseS2.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>2 Semitones (Analysis&ndash;Resynthesis):</b>
+      <audio controls>
+        <source src="static/samples/resynth/ariseS2.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>3 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/ariseS3.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>3 Semitones (Analysis&ndash;Resynthesis):</b>
+      <audio controls>
+        <source src="static/samples/resynth/ariseS3.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+
+    <div class="column">
+        <small><small>
+          <br>
+          <b>4 Semitones (Ours):</b>
+        <audio controls>
+          <source src="static/samples/ours/ariseS4.mp3", type="audio/mp3">
+        </audio>
+        <br>
+        <b>4 Semitones (Analysis&ndash;Resynthesis):</b>
+      <audio controls>
+        <source src="static/samples/resynth/ariseS4.mp3", type="audio/mp3">
+      </audio>
+      <br>
+        </small></small>
+    </div>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="column">
+        <small><small>
+          <br>
+          <b>Source: Angels in Amplifiers, "I'm Alright" (MUSDB18):</b>
         <audio controls>
           <source src="static/samples/ref/amplifiersS0.mp3", type="audio/mp3">
         </audio>
@@ -182,69 +295,7 @@
     <div class="column">
         <small><small>
           <br>
-          <b>Source (MUSDB18):</b>
-        <audio controls>
-          <source src="static/samples/ref/ariseS0.mp3", type="audio/mp3">
-        </audio>
-        <br>
-        </small></small>
-    </div>
-
-    <div class="column">
-        <small><small>
-          <br>
-          <b>2 Semitones (Ours):</b>
-        <audio controls>
-          <source src="static/samples/ours/ariseS2.mp3", type="audio/mp3">
-        </audio>
-        <br>
-        <b>2 Semitones (Analysis&ndash;Resynthesis):</b>
-      <audio controls>
-        <source src="static/samples/resynth/ariseS2.mp3", type="audio/mp3">
-      </audio>
-      <br>
-        </small></small>
-    </div>
-
-    <div class="column">
-        <small><small>
-          <br>
-          <b>3 Semitones (Ours):</b>
-        <audio controls>
-          <source src="static/samples/ours/ariseS3.mp3", type="audio/mp3">
-        </audio>
-        <br>
-        <b>3 Semitones (Analysis&ndash;Resynthesis):</b>
-      <audio controls>
-        <source src="static/samples/resynth/ariseS3.mp3", type="audio/mp3">
-      </audio>
-      <br>
-        </small></small>
-    </div>
-
-    <div class="column">
-        <small><small>
-          <br>
-          <b>4 Semitones (Ours):</b>
-        <audio controls>
-          <source src="static/samples/ours/ariseS4.mp3", type="audio/mp3">
-        </audio>
-        <br>
-        <b>4 Semitones (Analysis&ndash;Resynthesis):</b>
-      <audio controls>
-        <source src="static/samples/resynth/ariseS4.mp3", type="audio/mp3">
-      </audio>
-      <br>
-        </small></small>
-    </div>
-  </div>
-
-
-  <div class="columns is-centered">
-    <div class="column">
-        <small><small>
-          <br>
-          <b>Source (MUSDB18):</b>
+          <b>Source: Skelpolu, "Resurrection" (MUSDB18):</b>
         <audio controls>
           <source src="static/samples/ref/skelpoluS0.mp3", type="audio/mp3">
         </audio>
@@ -324,7 +375,7 @@
     <div class="column">
         <small><small>
           <br>
-          <b>Source (MUSDB18):</b>
+          <b>Source: Georgia Wonder, "Sirens" (MUSDB18):</b>
         <audio controls>
           <source src="static/samples/ref/sirenS0.mp3", type="audio/mp3">
         </audio>
@@ -386,7 +437,7 @@
     <div class="column">
         <small><small>
           <br>
-          <b>Source (MUSDB18):</b>
+          <b>Source: Mu, "Too Bright" (MUSDB18):</b>
         <audio controls>
           <source src="static/samples/ref/brightS0.mp3", type="audio/mp3">
         </audio>
@@ -449,7 +500,7 @@
     <div class="column">
         <small><small>
           <br>
-          <b>Source (MUSDB18):</b>
+          <b>Source: Secretariat, "Over The Top" (MUSDB18):</b>
         <audio controls>
           <source src="static/samples/ref/overthetopS0.mp3", type="audio/mp3">
         </audio>
